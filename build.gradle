@@ -1,0 +1,62 @@
+group = 'Siigo'
+version = '1.0-SNAPSHOT'
+
+description = 'Reto SIIGO'
+apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'java-library'
+apply plugin: 'maven-publish'
+apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
+
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+def versionSerenity = '4.2.0'
+def versionCucumber = '7.6.0'
+repositories {
+    mavenCentral()
+}
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+}
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "net.serenity-bdd:serenity-gradle-plugin:4.0.19"
+    }
+}
+dependencies {
+    dependencies {
+        implementation "net.serenity-bdd:serenity-cucumber:${versionSerenity}"
+        implementation group: 'io.cucumber', name: 'datatable', version: "${versionCucumber}"
+        testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: "${versionCucumber}"
+        implementation group: 'net.serenity-bdd', name: 'serenity-screenplay', version: "${versionSerenity}"
+        implementation group: 'net.serenity-bdd', name: 'serenity-screenplay-webdriver', version: "${versionSerenity}"
+        implementation group: 'net.serenity-bdd', name: 'serenity-junit', version: "${versionSerenity}"
+        implementation group: 'net.serenity-bdd', name: 'serenity-core', version: "${versionSerenity}"
+        implementation group: 'net.serenity-bdd', name: 'serenity-report-resources', version: "${versionSerenity}"
+        testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.8.2'
+
+        implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.6.1'
+        implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.6.1'
+        implementation group: 'org.slf4j', name: 'slf4j-simple', version: '2.0.0-alpha5'
+        compileOnly 'org.projectlombok:lombok:1.18.20'
+        annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    }
+}
+test {
+    useJUnit {
+        include "**/*";
+        gradle.startParameter.continueOnFailure = true
+        testLogging.showStandardStreams = true
+        systemProperties System.getProperties()
+        systemProperty "cucumber.filter.tags", System.getProperty("cucumber.filter.tags")
+    }
+}

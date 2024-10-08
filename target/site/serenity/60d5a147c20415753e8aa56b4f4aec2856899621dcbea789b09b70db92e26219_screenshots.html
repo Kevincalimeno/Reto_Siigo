@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="e8ca26745367f5c8515751583fd59823e375959f0dcc158836acd5ace03dd850.html">Create Customer On Siigo Website</a></span>
+                > <span class="truncate-60"><a
+                    href="60d5a147c20415753e8aa56b4f4aec2856899621dcbea789b09b70db92e26219.html">Create customer on Siigo website </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 08-10-2024 12:17</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Create Customer On Siigo Website </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="777d86591e0998559c7b241b9619475a3b220f2ea3c9c6437f99be4140c64431.html">Test1
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="5698da923f295f46ce5ab64ced2311fc60caa4e36b32112606d3adcfdce3f60b.html">30 To 60 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Create customer on Siigo website
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given that user starts the siigo website<br>When user logs with the following credentials<br><table class='embedded'><thead><th>user</th><th>pass</th></thead><tbody><tr><td>&lt;user&gt;</td><td>&lt;pass&gt;</td></tr></tbody></table><br>And user enters the form<br>And user fill out form with the following data<br><table class='embedded'><thead><th>slttipo</th><th>slttipo_identificacion</th><th>txtidentificacion</th><th>txtcodigo_sucursal</th><th>txtnombre</th><th>txtapellido</th><th>txtnombre_comercial</th><th>txtciudad</th><th>txtdireccion</th><th>txttelefono</th><th>txtcorreo_factura</th><th>slttipo_regimen</th><th>rbresponsabilidad_fiscal</th><th>txtindicativo</th><th>txttelefono1</th><th>txtcodigo_postal</th><th>txtnombre_contacto</th><th>txtapellidos_contacto</th><th>txtcorreo_contacto</th><th>txtcargo_contacto</th><th>txtindicativo_contacto</th><th>txttelefono_contacto</th></thead><tbody><tr><td>&lt;slttipo&gt;</td><td>&lt;slttipo_identificacion&gt;</td><td>&lt;txtidentificacion&gt;</td><td>&lt;txtcodigo_sucursal&gt;</td><td>&lt;txtnombre&gt;</td><td>&lt;txtapellido&gt;</td><td>&lt;txtnombre_comercial&gt;</td><td>&lt;txtciudad&gt;</td><td>&lt;txtdireccion&gt;</td><td>&lt;txttelefono&gt;</td><td>&lt;txtcorreo_factura&gt;</td><td>&lt;slttipo_regimen&gt;</td><td>&lt;rbresponsabilidad_fiscal&gt;</td><td>&lt;txtindicativo&gt;</td><td>&lt;txttelefono1&gt;</td><td>&lt;txtcodigo_postal&gt;</td><td>&lt;txtnombre_contacto&gt;</td><td>&lt;txtapellidos_contacto&gt;</td><td>&lt;txtcorreo_contacto&gt;</td><td>&lt;txtcargo_contacto&gt;</td><td>&lt;txtindicativo_contacto&gt;</td><td>&lt;txttelefono_contacto&gt;</td></tr></tbody></table><br>Then Validate customer create with text "Perfil del tercero"</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="0e82b494c49233fd53d9dda79826103b16deb92732c30fccea545684c9c57979.png" title=" 1: Create customer on Siigo website ({user=admin@siigoautomationqa.com, pass=(#T0Nu@QrO, slttipo=Es persona, slttipo_identificacion=C&eacute;dula de ciudadan&iacute;a, txtidentificacion=444444444, txtcodigo_sucursal=1111111, txtnombre=Kevin, txtapellido=CalimenoSecaida, txtnombre_comercial=kevincalimeno, txtciudad=bello, txtdireccion=Avenida siempre viva 1111, txttelefono=1111111111, txtcorreo_factura=kevincalimeno@test.com, slttipo_regimen=No responsable de IVA, rbresponsabilidad_fiscal=R&eacute;gimen simple de tributaci&oacute;n, txtindicativo=601, txttelefono1=22222222, txtcodigo_postal=1111111, txtnombre_contacto=Alexander, txtapellidos_contacto=Secaida, txtcorreo_contacto=alexandersecaida@test.com, txtcargo_contacto=Qa Automation, txtindicativo_contacto=601, txttelefono_contacto=3333333})" width="0"/>
+                <img src="0e82b494c49233fd53d9dda79826103b16deb92732c30fccea545684c9c57979.png" title=" Given that user starts the siigo website" width="0"/>
+                <img src="0e82b494c49233fd53d9dda79826103b16deb92732c30fccea545684c9c57979.png" title=" Kevin opens the browser at https://qastaging.siigo.com/#/login" width="0"/>
+                <img src="0e82b494c49233fd53d9dda79826103b16deb92732c30fccea545684c9c57979.png" title=" Given that user starts the siigo website (completed)" width="0"/>
+                <img src="0e82b494c49233fd53d9dda79826103b16deb92732c30fccea545684c9c57979.png" title=" When user logs with the following credentials
+| user | pass |
+| admin@siigoautomationqa.com | (#T0Nu@QrO |" width="0"/>
+                <img src="0e82b494c49233fd53d9dda79826103b16deb92732c30fccea545684c9c57979.png" title=" Kevin login with" width="0"/>
+                <img src="1b57e1351ad3caceeab878737f2bb7cc21085c7b7782d12f1771543939f9909f.png" title=" Kevin enters 'admin@siigoautomationqa.com' into textbox user" width="0"/>
+                <img src="913e7809dda12aa273ce171953f10f0a3fb4e6240f7a714465ad304d85c79b52.png" title=" Kevin enters 'admin@siigoautomationqa.com' into textbox user (completed)" width="0"/>
+                <img src="a397791eea1420bc185d22bcf8e0aefd59edb7778aec45d834f7443f6d289753.png" title=" Kevin enters '(#T0Nu@QrO' into textbox pass" width="0"/>
+                <img src="18137de6a58b513ec33533834eea9177ff25cd9e0a81dab9293b448c9345d72b.png" title=" Kevin enters '(#T0Nu@QrO' into textbox pass (completed)" width="0"/>
+                <img src="18137de6a58b513ec33533834eea9177ff25cd9e0a81dab9293b448c9345d72b.png" title=" Kevin clicks on login button" width="0"/>
+                <img src="16f0da787c2fb830b761d9aae5e6c7299595223ad39456ea03756455a35282b3.png" title=" Kevin clicks on login button (completed)" width="0"/>
+                <img src="16f0da787c2fb830b761d9aae5e6c7299595223ad39456ea03756455a35282b3.png" title=" Kevin login with (completed)" width="0"/>
+                <img src="d8e416646f68dd301cbe459a9bde56b8b7cde5a792fce280a31588f5a7e8c6a4.png" title=" When user logs with the following credentials
+| user | pass |
+| admin@siigoautomationqa.com | (#T0Nu@QrO | (completed)" width="0"/>
+                <img src="d8e416646f68dd301cbe459a9bde56b8b7cde5a792fce280a31588f5a7e8c6a4.png" title=" And user enters the form" width="0"/>
+                <img src="d8e416646f68dd301cbe459a9bde56b8b7cde5a792fce280a31588f5a7e8c6a4.png" title=" Kevin enter customer" width="0"/>
+                <img src="fe0668d1b51201f299c4012c53f91404fc88a31e68b4e94ca4d3d3db84fbd44d.png" title=" Kevin clicks on Button on the mainpage to create" width="0"/>
+                <img src="8e2d7ac85e972153fa098f00e33310958b8d48df86b3be4fc822f4f3d5a7ca05.png" title=" Kevin clicks on Button on the mainpage to create (completed)" width="0"/>
+                <img src="8e2d7ac85e972153fa098f00e33310958b8d48df86b3be4fc822f4f3d5a7ca05.png" title=" Kevin clicks on Button clients form" width="0"/>
+                <img src="f79cc3b7e11c31b7d83a56101aac47bacf8396bfb3d61bc85cf49855245a31f8.png" title=" Kevin clicks on Button clients form (completed)" width="0"/>
+                <img src="f79cc3b7e11c31b7d83a56101aac47bacf8396bfb3d61bc85cf49855245a31f8.png" title=" Kevin enter customer (completed)" width="0"/>
+                <img src="f79cc3b7e11c31b7d83a56101aac47bacf8396bfb3d61bc85cf49855245a31f8.png" title=" And user enters the form (completed)" width="0"/>
+                <img src="f79cc3b7e11c31b7d83a56101aac47bacf8396bfb3d61bc85cf49855245a31f8.png" title=" And user fill out form with the following data
+| slttipo | slttipo_identificacion | txtidentificacion | txtcodigo_sucursal | txtnombre | txtapellido | txtnombre_comercial | txtciudad | txtdireccion | txttelefono | txtcorreo_factura | slttipo_regimen | rbresponsabilidad_fiscal | txtindicativo | txttelefono1 | txtcodigo_postal | txtnombre_contacto | txtapellidos_contacto | txtcorreo_contacto | txtcargo_contacto | txtindicativo_contacto | txttelefono_contacto |
+| Es persona | C&eacute;dula de ciudadan&iacute;a | 444444444 | 1111111 | Kevin | CalimenoSecaida | kevincalimeno | bello | Avenida siempre viva 1111 | 1111111111 | kevincalimeno@test.com | No responsable de IVA | R&eacute;gimen simple de tributaci&oacute;n | 601 | 22222222 | 1111111 | Alexander | Secaida | alexandersecaida@test.com | Qa Automation | 601 | 3333333 |" width="0"/>
+                <img src="f79cc3b7e11c31b7d83a56101aac47bacf8396bfb3d61bc85cf49855245a31f8.png" title=" Kevin fill out customer" width="0"/>
+                <img src="f79cc3b7e11c31b7d83a56101aac47bacf8396bfb3d61bc85cf49855245a31f8.png" title=" Kevin clicks on Selector para persona" width="0"/>
+                <img src="bf962fb05bd3b4dc095b3b2d08e1e8bd5b2e6f49d983b7371a9f799373d29875.png" title=" Kevin clicks on Selector para persona (completed)" width="0"/>
+                <img src="bf962fb05bd3b4dc095b3b2d08e1e8bd5b2e6f49d983b7371a9f799373d29875.png" title=" Kevin select from list" width="0"/>
+                <img src="9b65f0b78c13302e22d43e77a2d6794fccb395d49216ad4c4729455b15c16f5f.png" title=" Kevin select from list (completed)" width="0"/>
+                <img src="9b65f0b78c13302e22d43e77a2d6794fccb395d49216ad4c4729455b15c16f5f.png" title=" Kevin clicks on Selector de identificaci&oacute;n" width="0"/>
+                <img src="0ecae6053e1675b04dc50d2cd1d23dd7e4111c77adf743aca12a3e0c66b0acfe.png" title=" Kevin clicks on Selector de identificaci&oacute;n (completed)" width="0"/>
+                <img src="0ecae6053e1675b04dc50d2cd1d23dd7e4111c77adf743aca12a3e0c66b0acfe.png" title=" Kevin select from list" width="0"/>
+                <img src="01475f642508e3b10d0a832dd226c1caedb1a5b7f26772a4a63e2a6b6cfbe212.png" title=" Kevin select from list (completed)" width="0"/>
+                <img src="01475f642508e3b10d0a832dd226c1caedb1a5b7f26772a4a63e2a6b6cfbe212.png" title=" Kevin enters '444444444' into Campo para identificaci&oacute;n" width="0"/>
+                <img src="e70c151546d6e2f9279abdc2b6425b0bb3cd4480783f5eea8415cd98c111f458.png" title=" Kevin enters '444444444' into Campo para identificaci&oacute;n (completed)" width="0"/>
+                <img src="e70c151546d6e2f9279abdc2b6425b0bb3cd4480783f5eea8415cd98c111f458.png" title=" Kevin enters '1111111' into Campo para c&oacute;digo de sucursal" width="0"/>
+                <img src="46cd13d6382ea6bf4ae561850afc7ca64d24690ae1884122b3f8ee6fdf9b0d5d.png" title=" Kevin enters '1111111' into Campo para c&oacute;digo de sucursal (completed)" width="0"/>
+                <img src="46cd13d6382ea6bf4ae561850afc7ca64d24690ae1884122b3f8ee6fdf9b0d5d.png" title=" Kevin enters 'Kevin' into Campo para nombre" width="0"/>
+                <img src="a58470dfa2463b4d5773a0958968b8f0f50b0d40abc27fbf4e0481a02dd9f9c1.png" title=" Kevin enters 'Kevin' into Campo para nombre (completed)" width="0"/>
+                <img src="a58470dfa2463b4d5773a0958968b8f0f50b0d40abc27fbf4e0481a02dd9f9c1.png" title=" Kevin enters 'CalimenoSecaida' into Campo para apellido" width="0"/>
+                <img src="88647fedd5b9e45d473d985982438180ec53a3f74cc3270e638ba4d7890378c4.png" title=" Kevin enters 'CalimenoSecaida' into Campo para apellido (completed)" width="0"/>
+                <img src="88647fedd5b9e45d473d985982438180ec53a3f74cc3270e638ba4d7890378c4.png" title=" Kevin enters 'kevincalimeno' into Campo para nombre comercial" width="0"/>
+                <img src="b98852d27d6cd3d806f46386bb698ecd43105a1b01d423c5f59e66f78431708f.png" title=" Kevin enters 'kevincalimeno' into Campo para nombre comercial (completed)" width="0"/>
+                <img src="b98852d27d6cd3d806f46386bb698ecd43105a1b01d423c5f59e66f78431708f.png" title=" Kevin clicks on Etiqueta de ciudad" width="0"/>
+                <img src="4d9d15ddbf1df7ea559af14bba37dc25b4161cd63a6c02ea28cdae1c497e5c54.png" title=" Kevin clicks on Etiqueta de ciudad (completed)" width="0"/>
+                <img src="4d9d15ddbf1df7ea559af14bba37dc25b4161cd63a6c02ea28cdae1c497e5c54.png" title=" Kevin enters 'bello' into Campo para ciudad" width="0"/>
+                <img src="1fcf777f7dca737b1b5b495d57ae7821ac12536d7c8b94f1e6e23f72cbbb3000.png" title=" Kevin enters 'bello' into Campo para ciudad (completed)" width="0"/>
+                <img src="1fcf777f7dca737b1b5b495d57ae7821ac12536d7c8b94f1e6e23f72cbbb3000.png" title=" Kevin select from list" width="0"/>
+                <img src="a6ca1099441f2fde006a8d24d59e24baea9e513772d42476f91c579ebd2314ff.png" title=" Kevin select from list (completed)" width="0"/>
+                <img src="a6ca1099441f2fde006a8d24d59e24baea9e513772d42476f91c579ebd2314ff.png" title=" Kevin enters 'Avenida siempre viva 1111' into Campo para direcci&oacute;n" width="0"/>
+                <img src="1a6206a0dd3370dc77bf21e4f7ac2eccfa6d8498c64f5d25c83df791a33e2dc7.png" title=" Kevin enters 'Avenida siempre viva 1111' into Campo para direcci&oacute;n (completed)" width="0"/>
+                <img src="1a6206a0dd3370dc77bf21e4f7ac2eccfa6d8498c64f5d25c83df791a33e2dc7.png" title=" Kevin enters 'kevincalimeno@test.com' into Campo para correo electr&oacute;nico" width="0"/>
+                <img src="9feb2b95fbddfa059d3553d4e16b7a49b429e58fadde6811d43b054e0f4537d6.png" title=" Kevin enters 'kevincalimeno@test.com' into Campo para correo electr&oacute;nico (completed)" width="0"/>
+                <img src="9feb2b95fbddfa059d3553d4e16b7a49b429e58fadde6811d43b054e0f4537d6.png" title=" Kevin enters '1111111111' into Campo para tel&eacute;fono" width="0"/>
+                <img src="61cf99601bb816f73f28d9c758d3d7e3fd0cfa09be7be36d96e3f542d3a83431.png" title=" Kevin enters '1111111111' into Campo para tel&eacute;fono (completed)" width="0"/>
+                <img src="61cf99601bb816f73f28d9c758d3d7e3fd0cfa09be7be36d96e3f542d3a83431.png" title=" Kevin clicks on Selector de r&eacute;gimen IVA" width="0"/>
+                <img src="9f561f46cd4be8a2289c345b5dba6894cb23964175f148b338d71b5421e31dc7.png" title=" Kevin clicks on Selector de r&eacute;gimen IVA (completed)" width="0"/>
+                <img src="9f561f46cd4be8a2289c345b5dba6894cb23964175f148b338d71b5421e31dc7.png" title=" Kevin select from list" width="0"/>
+                <img src="07a67499733e9643d2f5fdfd66c1aa17b584dac518f42814175eb544601b48d7.png" title=" Kevin select from list (completed)" width="0"/>
+                <img src="07a67499733e9643d2f5fdfd66c1aa17b584dac518f42814175eb544601b48d7.png" title=" Kevin enters '601' into Campo para indicativo de tel&eacute;fono" width="0"/>
+                <img src="d2480eb6a60ae721994126ae0873e18922c8e744dbf6ffe8bcb8048df6084f7d.png" title=" Kevin enters '601' into Campo para indicativo de tel&eacute;fono (completed)" width="0"/>
+                <img src="d2480eb6a60ae721994126ae0873e18922c8e744dbf6ffe8bcb8048df6084f7d.png" title=" Kevin enters '22222222' into Campo para tel&eacute;fono de facturaci&oacute;n" width="0"/>
+                <img src="953d8836bb6dae4ac2ecd9a05f606ba4c663cf899b5a34abac05b875b1148950.png" title=" Kevin enters '22222222' into Campo para tel&eacute;fono de facturaci&oacute;n (completed)" width="0"/>
+                <img src="953d8836bb6dae4ac2ecd9a05f606ba4c663cf899b5a34abac05b875b1148950.png" title=" Kevin enters '1111111' into Campo para c&oacute;digo postal" width="0"/>
+                <img src="fef985b98e19467734bfb19955440fb629908d5ef1e3da91439ec4569f9c54f8.png" title=" Kevin enters '1111111' into Campo para c&oacute;digo postal (completed)" width="0"/>
+                <img src="fef985b98e19467734bfb19955440fb629908d5ef1e3da91439ec4569f9c54f8.png" title=" Kevin clicks on Selector de responsabilidad fiscal" width="0"/>
+                <img src="e81966774d91ae87accfa77f53f7181fe01be7634928a32e2e801b574d3f3e5e.png" title=" Kevin clicks on Selector de responsabilidad fiscal (completed)" width="0"/>
+                <img src="e81966774d91ae87accfa77f53f7181fe01be7634928a32e2e801b574d3f3e5e.png" title=" Kevin clicks on contactos" width="0"/>
+                <img src="00384a26e45369424e3f99ae22db6e3588f27379a30f14443304fef805c80b22.png" title=" Kevin clicks on contactos (completed)" width="0"/>
+                <img src="00384a26e45369424e3f99ae22db6e3588f27379a30f14443304fef805c80b22.png" title=" Kevin enters 'Alexander' into Campo para nombre de contacto" width="0"/>
+                <img src="064c0fe33b951abb754db09f504e9309a54a001b41404638621f06d56552c37f.png" title=" Kevin enters 'Alexander' into Campo para nombre de contacto (completed)" width="0"/>
+                <img src="064c0fe33b951abb754db09f504e9309a54a001b41404638621f06d56552c37f.png" title=" Kevin enters 'Secaida' into Campo para apellido de contacto" width="0"/>
+                <img src="eae9c844a4234b23f08c3f4735ac90cb27db26e067ef056c194dc0f846bdd8ff.png" title=" Kevin enters 'Secaida' into Campo para apellido de contacto (completed)" width="0"/>
+                <img src="eae9c844a4234b23f08c3f4735ac90cb27db26e067ef056c194dc0f846bdd8ff.png" title=" Kevin enters 'alexandersecaida@test.com' into Campo para correo de contacto" width="0"/>
+                <img src="21cd279611a4f9c2597e07d0b5de4f067bc190028ec43ed183d3dab9382d402c.png" title=" Kevin enters 'alexandersecaida@test.com' into Campo para correo de contacto (completed)" width="0"/>
+                <img src="21cd279611a4f9c2597e07d0b5de4f067bc190028ec43ed183d3dab9382d402c.png" title=" Kevin enters 'Qa Automation' into Campo para cargo de contacto" width="0"/>
+                <img src="19ce4c0873f4697019cda04dcec5d6707356110ab377c64760ecfb611218cb89.png" title=" Kevin enters 'Qa Automation' into Campo para cargo de contacto (completed)" width="0"/>
+                <img src="19ce4c0873f4697019cda04dcec5d6707356110ab377c64760ecfb611218cb89.png" title=" Kevin enters '601' into Campo para indicativo de contacto" width="0"/>
+                <img src="aeb1206cb7d27b252cc0f6979cc2f3e4306c8137a3fbe3b8a68bd9a1b69a6179.png" title=" Kevin enters '601' into Campo para indicativo de contacto (completed)" width="0"/>
+                <img src="aeb1206cb7d27b252cc0f6979cc2f3e4306c8137a3fbe3b8a68bd9a1b69a6179.png" title=" Kevin enters '3333333' into Campo para n&uacute;mero de tel&eacute;fono de contacto" width="0"/>
+                <img src="a2581370e023b1177b4ae2b68e3997c0a7ee6755330f08cc7989d4894d6c9c8c.png" title=" Kevin enters '3333333' into Campo para n&uacute;mero de tel&eacute;fono de contacto (completed)" width="0"/>
+                <img src="a2581370e023b1177b4ae2b68e3997c0a7ee6755330f08cc7989d4894d6c9c8c.png" title=" Kevin clicks on Bot&oacute;n para guardar" width="0"/>
+                <img src="77a6bbc178bfe30b0566582870a989c282cc356a3fdba49e0a8c8535def3e39f.png" title=" Kevin clicks on Bot&oacute;n para guardar (completed)" width="0"/>
+                <img src="ac6ffd845c7ed5963fb4d2b3072cb727f85c9f4aeae5689fe4a0c80031ac98e0.png" title=" Kevin fill out customer (completed)" width="0"/>
+                <img src="ac6ffd845c7ed5963fb4d2b3072cb727f85c9f4aeae5689fe4a0c80031ac98e0.png" title=" And user fill out form with the following data
+| slttipo | slttipo_identificacion | txtidentificacion | txtcodigo_sucursal | txtnombre | txtapellido | txtnombre_comercial | txtciudad | txtdireccion | txttelefono | txtcorreo_factura | slttipo_regimen | rbresponsabilidad_fiscal | txtindicativo | txttelefono1 | txtcodigo_postal | txtnombre_contacto | txtapellidos_contacto | txtcorreo_contacto | txtcargo_contacto | txtindicativo_contacto | txttelefono_contacto |
+| Es persona | C&eacute;dula de ciudadan&iacute;a | 444444444 | 1111111 | Kevin | CalimenoSecaida | kevincalimeno | bello | Avenida siempre viva 1111 | 1111111111 | kevincalimeno@test.com | No responsable de IVA | R&eacute;gimen simple de tributaci&oacute;n | 601 | 22222222 | 1111111 | Alexander | Secaida | alexandersecaida@test.com | Qa Automation | 601 | 3333333 | (completed)" width="0"/>
+                <img src="ac6ffd845c7ed5963fb4d2b3072cb727f85c9f4aeae5689fe4a0c80031ac98e0.png" title=" Then Validate customer create with text &quot;Perfil del tercero&quot;" width="0"/>
+                <img src="33ad2d6f66b56270e48f9004e6b3bf687c31e2de731347bbf53355ced7a24bd5.png" title=" Then validate" width="0"/>
+                <img src="2bcb3763812ee8b0705cfe7581701f65b5a631eb439d457382f2dd9c0ccd8024.png" title=" Then validate (completed)" width="0"/>
+                <img src="2bcb3763812ee8b0705cfe7581701f65b5a631eb439d457382f2dd9c0ccd8024.png" title=" Then Validate customer create with text &quot;Perfil del tercero&quot; (completed)" width="0"/>
+
+                <img src="2bcb3763812ee8b0705cfe7581701f65b5a631eb439d457382f2dd9c0ccd8024.png" title=" 1: Create customer on Siigo website ({user=admin@siigoautomationqa.com, pass=(#T0Nu@QrO, slttipo=Es persona, slttipo_identificacion=Cédula de ciudadanía, txtidentificacion=444444444, txtcodigo_sucursal=1111111, txtnombre=Kevin, txtapellido=CalimenoSecaida, txtnombre_comercial=kevincalimeno, txtciudad=bello, txtdireccion=Avenida siempre viva 1111, txttelefono=1111111111, txtcorreo_factura=kevincalimeno@test.com, slttipo_regimen=No responsable de IVA, rbresponsabilidad_fiscal=Régimen simple de tributación, txtindicativo=601, txttelefono1=22222222, txtcodigo_postal=1111111, txtnombre_contacto=Alexander, txtapellidos_contacto=Secaida, txtcorreo_contacto=alexandersecaida@test.com, txtcargo_contacto=Qa Automation, txtindicativo_contacto=601, txttelefono_contacto=3333333}) (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.19</span>
+</div>
+</body>
+</html>
